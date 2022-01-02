@@ -6,8 +6,11 @@
 }
 
 :root {
-    --lightGreen: #EFFAFA; 
+    --lightGreen: #EFFAFA;
     --darkGreen: #5CA5A5;
+    --grey: #7C8F8F;
+    --greyLine: #B7C4C4;
+
 } 
 
 body {
@@ -75,7 +78,7 @@ section {
 .new,
 .featured {
     border-radius: 20px;
-    padding: 10px 12px 8px;
+    padding: 8px 12px 4px;
 }
 
 .new>p,
@@ -92,4 +95,28 @@ section {
 
 h2 {
     font-size: 1.2rem;
+    margin: 0.8rem 0;
+}
+
+.grey {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+.line {
+    width: auto;
+    height: 1px;
+    background-color: var(--greyLine);
+    margin: 1rem 0;
+}
+
+button {
+    background-color: var(--lightGreen);
+    color: var(--darkGreen);
+    border: none;
+    border-radius: 3px;
+    font-weight: 600;
+    padding: 8px 12px;
+    font-size: 15px;
+    margin: 0 10px 10px 0;
 }
