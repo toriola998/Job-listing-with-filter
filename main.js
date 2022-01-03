@@ -1,10 +1,9 @@
 import data from './data.js'
-console.log(data)
+//console.log(data)
 const container = document.querySelector('.container')
 
-
 data.forEach( (job) => {
-    console.log(job)
+   // console.log(job)
     container.innerHTML += `
     <div class="box">
     <div>
@@ -27,10 +26,10 @@ data.forEach( (job) => {
             <span>${job.location}</span>
         </p>
         <div class="line"></div>
-        <button>Frontend</button>
-        <button>Senior</button>
-        <button>CSS</button>
-        <button>JavaScript</button>
+        <button>${job.role}</button>
+        <button>${job.level}</button>
+        <ul> ${job.languages.map(lang => `<li><button>${lang}</button></li>`).join("")} </ul>
+        <ul> ${job.tools.map(tool => `<li><button>${tool}</button></li>`).join("")} </ul>
     </div>	
 </div>
     `
