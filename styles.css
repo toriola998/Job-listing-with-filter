@@ -29,7 +29,7 @@ header {
 
 main {
     background-color: var(--lightGreen);
-    height: 100vh;
+    height: 100%;
 }
 
 .filtered-keywords {
