@@ -55,6 +55,15 @@ main section {
 .flex-wrap {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+}
+
+.clear-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    color: var(--grey);
+    font-weight: 800;
 }
 
 .green-bg {

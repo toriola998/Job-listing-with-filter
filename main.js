@@ -14,7 +14,7 @@ data.forEach( (job) => {
                 <p>NEW!</p>
             </div>
             
-            <div class="flex-center featured">
+            <div class="flex-center featured"> 
                 <p>FEATURED</p>
             </div>
         </div>
@@ -26,11 +26,26 @@ data.forEach( (job) => {
             <span>${job.location}</span>
         </p>
         <div class="line"></div>
-        <button>${job.role}</button>
-        <button>${job.level}</button>
-        <ul> ${job.languages.map(lang => `<li><button>${lang}</button></li>`).join("")} </ul>
-        <ul> ${job.tools.map(tool => `<li><button>${tool}</button></li>`).join("")} </ul>
+
+        <div>
+            <button class="btn">${job.role}</button>
+            <button class="btn">${job.level}</button>
+            <ul> ${job.languages.map(lang => `<li><button class="btn">${lang}</button></li>`).join("")} </ul>
+            <ul> ${job.tools.map(tool => `<li><button class="btn">${tool}</button></li>`).join("")} </ul>
+        </div>
+        
     </div>	
 </div>
     `
+})
+
+const button = [...document.querySelectorAll('button')];
+const allJobs = [...document.querySelectorAll('.box')]
+
+allJobs.forEach ( (box) => {
+    box.addEventListener('click', (e)=>{
+        if(e.target.classList.contains('btn')) {
+            console.log(e.target.innerText)
+        }
+    })
 })
